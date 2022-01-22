@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .3s;
+}
+
+body {
+    font-family: 'Roboto',
+        sans-serif;
+    color: var(--mainBlack);
+    background-color: var(--mainBlack);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    padding: 0;
+}
+
+.container {
+    overflow: hidden;
+}
+
+body {
+    background: var(--mainBlack);
+}
+
+/* ===================side scroll=================== */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--mainYellow);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--mainWhite);
+}
+
+/* Color's */
+:root {
+    --mainBlue: #40ACF1;
+    --transparentBlue: rgba(64, 172, 241, 0.7);
+    --mainWhite: #FFFFFF;
+    /* --mainBlack: #292F36; */
+    --mainBlack: #000;
+    --mainGrey: #818181;
+    --mainYellow: #64dfdf;
+    /* --mainYellow: #e3b505; */
+    --mainGreen: #6fda18;
+}
+
+/* =============Pre Loader=================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../img/Matrix-1s-1084px.svg');
+    z-index: 999;
+    animation: zoom 15s 1s infinite;
+}
+
+.preloader img {
+    width: 220px;
+    height: 220px;
+}
+
+.hide-Preloader {
+    display: none !important;
+}
+
+/* ====================================== */
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--mainYellow);
+    text-transform: capitalize;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* ====================================*/
+/* ===============Top Menu=============== */
+.top-menu {
+    background-color: var(--mainBlack);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+.top-menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    color: var(--mainYellow);
+    font-size: 2rem;
+    text-shadow: #00000038 0 0 5px;
+    /* font-family: Nunito; */
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.logo:hover {
+    color: var(--mainWhite);
+    /* transform: scale(1.02); */
+    font-size: 2.1rem;
+    border-bottom: var(--mainYellow) 2px solid;
+}
+
+.logo-wrapper a:hover {
+    text-decoration: none;
+}
+
+.top-menu-items {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.top-menu-item {
+    font-family: Nunito;
+    margin-left: .7rem;
+    font-size: 1.3rem;
+    text-shadow: var(--mainYellow) 2px 3px 5px;
+    color: var(--mainWhite);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.top-menu-item:hover {
+    text-decoration: none;
+    color: var(--mainYellow);
+    border-bottom: solid 1px var(--mainWhite);
+    transform: rotate(-10deg);
+    margin-left: .9rem;
+    margin-right: .9rem;
+}
+
+.top-menu-btn {
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.top-menu-btn:hover {
+    color: var(--mainYellow);
+}
+.progress-container{
+    direction: rtl;
+    width: 100%;
+    background-color: var(--mainGrey);
+    height: .25rem;
+    box-shadow: 0 1px 5px var(--mainWhite) ,0 3px 5px var(--mainYellow);
+}
+.top-menu-progress{
+    width: 0;
+    filter: blur(1px);
+    height: 100%;
+    background-color: var(--mainYellow);
+    transition: all .2s;
+}
+
+/* ===============End Top Menu=============== */
+/* ===============Start Header=============== */
+header {
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/wallpaperflare.com_wallpaper3445.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    animation: zoom 20s 1s infinite;
+    animation-delay: 2s;
+    min-height: calc(100vh - 68px);
+    margin-top: 20px;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header .container {
+    padding-top: 120px;
+}
+
+.person {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: rgba(255, 255, 255, 0.616) 0 0 25px, var(--mainYellow) 0 0 35px;
+}
+
+.header-title {
+    color: var(--mainWhite);
+    text-shadow: var(--mainYellow) 2px 3px 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all .5s;
+    text-align: center;
+}
+
+.header-btn {
+    margin-top: 15px;
+    width: 150px;
+    padding: 5px;
+    color: var(--mainWhite) !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: Nunito;
+    transition: all .3s;
+    background-color: transparent;
+    border: 1px solid var(--mainYellow);
+}
+
+.header-btn:hover {
+    color: black !important;
+    background-color: var(--mainYellow);
+}
+
+.header-btn1 {
+    margin-right: 10px;
+}
+
+.header-btn2 {
+    margin-left: 10px;
+}
+
+/* ===============End Header=============== */
+/* ===============Start Music================ */
+.player{
+    background: var(--mainYellow) url('../img/—Pngtree—pause icon_4419908.png') no-repeat center;
+    background-size: 40px;
+    display: block;
+    outline: none;
+    position: fixed;
+    font-size: 2rem;
+    padding: 10px;
+    right: 20px;
+    bottom: 60px;
+    border: none;
+    width: 40px !important;
+    height: 40px;
+    border-radius: 5px;
+    color: var(--mainBlack);
+    cursor: pointer;
+    z-index: 2;
+    transition: all .3s;
+}
+.player:hover{
+    background-color: var(--mainGrey);
+}
+.player.active{
+    background: var(--mainYellow) url('../img/—Pngtree—vector play button icon_4184689.png') no-repeat center;
+    background-size: 30px;
+}
+/* ==================Start Themes ================*/
+.theme {
+    background: var(--mainYellow) no-repeat center;
+    outline: none;
+    position: fixed;
+    font-size: 2rem;
+    padding: 10px;
+    right: 20px;
+    bottom: 10px;
+    border: none;
+    width: 40px !important;
+    height: 40px;
+    border-radius: 5px;
+    color: var(--mainBlack);
+    cursor: pointer;
+    z-index: 2;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-theme{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #9d72ff;
+    background-position: center;
+    box-shadow: 0 0 4px var(--mainWhite) ,0 0 5px var(--mainBlack);
+    border: 4px solid var(--mainBlack);
+    object-fit: cover;
+}
+.theme:hover{
+    background-color: var(--mainGrey);
+}
+
+/* ================start Scroll=============== */
+.scroll {
+    background: var(--mainYellow) no-repeat center;
+    outline: none;
+    position: fixed;
+    font-size: 2rem;
+    padding: 10px;
+    right: 20px;
+    bottom: 110px;
+    border: none;
+    width: 40px !important;
+    height: 40px;
+    border-radius: 5px;
+    color: var(--mainBlack);
+    cursor: auto;
+    z-index: 2;
+    opacity: 0;
+    transition: all .5s;
+    transform: translateX(50px);
+}
+.scroll:hover{
+    background-color: var(--mainGrey);
+}
+.scroll.show {
+    opacity: 1 !important;
+    cursor: pointer;
+    transform: translateX(0);
+}
+
+/* ================End Scroll=============== */
+/*============== start about section==================== */
+.about {
+    background-color: var(--mainBlack);
+}
+
+.about .container {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-wrapper,
+.about-caption {
+    text-transform: capitalize;
+    background-color: var(--mainWhite);
+    padding: 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: 5px solid var(--mainYellow);
+    box-shadow: 0 3px 20px var(--mainWhite),
+        0 5px 20px var(--mainYellow);
+}
+
+.about-caption {
+    text-align: right !important;
+    border-left: var(--mainYellow) 2px dashed;
+}
+
+.about-icon {
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+.hobbys {
+    text-align: left !important;
+}
+
+.about-wrapper {
+    border-right: var(--mainYellow) 2px dashed;
+}
+
+hr {
+    background-color: black;
+}
+
+.about p {
+    margin-bottom: 0;
+}
+
+/* ===============Start Skills Section=============== */
+.skills {
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url('../img/wallpaperflare.com_wallpaper (1)384458.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.skills .container {
+    animation: zoom2 20s 1s infinite;
+    animation-delay: 2s;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+@keyframes zoom2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.skills .row {
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.skill-caption {
+    color: var(--mainWhite);
+    margin-bottom: 0;
+    font: 1rem;
+    width: 20%;
+    text-align: center;
+}
+
+.skill {
+    width: 80%;
+}
+
+.skill div {
+    color: var(--mainBlack);
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.skill div.progress-bar {
+    background-color: var(--mainYellow);
+}
+
+/* ===============End Skills Section=============== */
+/* =============Text me section=========================== */
+.textme {
+    border-bottom: 2px solid var(--mainWhite);
+    background:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../img/30.jpg') center fixed no-repeat ;
+    background-size: cover;
+}
+
+.textme-box::placeholder {
+    color: black;
+}
+
+.textme-box {
+    width: 100%;
+    height: 400px;
+    padding: 10px 15px;
+    border: 2px solid var(--mainYellow);
+    box-shadow: 0 3px 15px var(--mainYellow);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+.textme-btn {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: var(--mainYellow);
+    background-color: transparent;
+    border: 1px solid var(--mainYellow);
+    font-weight: bold;
+    outline: none;
+}
+
+.textme-btn:hover {
+    color: black;
+    background-color: var(--mainYellow);
+}
+
+/* =============End Text me section====================== */
+/* ===========start footer============= */
+footer {
+    background: var(--mainBlack);
+}
+
+footer .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer-item {
+    color: var(--mainYellow);
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.tel:hover {
+    color: #22a1f0;
+}
+
+.insta:hover {
+    color: #ad0edd;
+}
+
+.linkedin:hover {
+    color: #576dce;
+}
+
+.twitter:hover {
+    color: #40ACF1;
+}
+
+.whatsapp:hover {
+    color: #18c935;
+}
+
+/* ==================== */

@@ -1,0 +1,83 @@
+@media only screen and (max-width:992px){
+    .top-menu-items{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        background-color: var(--mainBlack);
+        border-right:5px solid var(--mainYellow) ;
+        box-shadow: 0 0 5px var(--mainWhite);
+        width: 250px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -250px;
+        transition: all .3s ease-out;
+        z-index: 3;
+    }
+    .top-menu-item{
+        display: block;
+        margin: 8px 0px;
+        color: var(--mainYellow);
+        text-shadow: var(--mainWhite) 2px 2px  5px;
+    }
+    .top-menu-item:hover{
+        color: var(--mainWhite);
+        border-bottom: 1px solid var(--mainYellow);
+    }
+    .skill-caption {
+        font-size: .8rem;
+    }
+          .record {
+              margin-top: 30px;
+          }
+}
+@media only screen and (max-width:768px) {
+    .skills-wrapper{
+        margin-right: 10px;
+    }
+    .about .row{
+        justify-content: center;
+    }
+      .about-caption {
+          margin-top: 30px;
+          width: 85%;
+      }
+      .about-wrapper{
+          width: 85%;
+      }
+      .skills .container{
+          animation: none;
+      }
+}
+@media only screen and (max-width:576px) {
+    .top-menu .container{
+        padding: 15px;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    .header{
+        height: 600px;
+    }
+    .person{
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+    }
+    .header-btn{
+        width: 120px;
+    }
+    .player,.theme,.scroll{
+        width: 30px !important;
+        height: 40px;
+        background-size: 30px;
+    }
+    .inner-theme {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--mainBlack);
+    }
+    .player.active{
+        background-size: 20px;
+    }
+}
